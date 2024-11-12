@@ -1,0 +1,5 @@
+export * from './Clerigo'
+export * from './Magos'
+export * from './Guerrero'
+export * from './HomePages'
+export * from './Login'

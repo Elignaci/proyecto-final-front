@@ -12,17 +12,16 @@ function App() {
     <>
       <UserProvider>
         <header>
-          <>HEADER</>
+          
         </header>
         <nav>
-        <NavBar/>
+          <NavBar />
         </nav>
         <main>
-          <AppRouters />
+        <AppRouters />
         </main>
 
         <footer>
-          <>FOOTER</>
         </footer>
       </UserProvider>
     </>

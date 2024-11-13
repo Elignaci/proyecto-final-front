@@ -1,6 +1,9 @@
-
+import { GridClases } from "../../components/GridClases"
 export const Clerigo = () => {
   return (
-    <div>Clerigo</div>
+    <>
+    <h2>Clerigos</h2>
+    <GridClases category={"clerigo"}/>
+    </>
   )
 }

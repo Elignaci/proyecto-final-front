@@ -1,44 +1,23 @@
 import { NavLink } from "react-router-dom";
+import { useUsers } from "../../hooks/useUsers";
 import './navBar.css'
+import { NavBarAdmin } from "./NavBarAdmin";
+import { NavBarUsers } from "./NavBarUsers";
 
-export const NavBar = () =>{
+export const NavBar = () => {
+    const { isAuthenticated } = useUsers()
     return (
-<ul>
-    <li>
-    <NavLink to="/"
-    className={({ isActive }) => isActive ? 'menuActivo' : ''}
-            >
-                Home
-    </NavLink>
-    </li>
-    <li>
-    <NavLink to="clerigo"
-    className={({ isActive }) => isActive ? 'menuActivo' : ''}
-            >
-                Clerigo
-    </NavLink>
-    </li>
-    <li>
-    <NavLink to="mago"
-    className={({ isActive }) => isActive ? 'menuActivo' : ''}
-            >
-                Mago
-    </NavLink>
-    </li>
-    <li>
-    <NavLink to="guerrero"
-    className={({ isActive }) => isActive ? 'menuActivo' : ''}
-            >
-                Guerrero
-    </NavLink>
-    </li>
-    
-    <NavLink to="login"
-      className={({ isActive }) => isActive ? 'menuActivo' : ''}
-            >
-                Login
-    </NavLink>
-</ul>
+        <><section className="autenticado">
+            {
+                isAuthenticated
+                    ?
+                    <NavBarAdmin />
+                    :
+                    <NavBarUsers />
+            }
+        </section>
+        </>
+
     )
 }
 

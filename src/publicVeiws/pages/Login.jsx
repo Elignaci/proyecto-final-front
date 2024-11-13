@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { UserContext } from "../../context/UserContext"
 import{useNavigate} from "react-router-dom"
 
+
 export const Login = () => {
   const { mensaje, user, setUser, isAuthenticated, login } = useContext(UserContext)
   const navigate = useNavigate()
@@ -11,22 +12,20 @@ export const Login = () => {
     const nombre = ev.target.nombre.value.trim()
     const password = ev.target.password.value.trim()
 
-    const logeredUser = {
-        id: 2,
-        nombre,
-        roll: 'admin'
-    }
+  
 
     setUser(logeredUser)
     login()
     navigate('/admin')
 }
   return (
-    <div>
-            <code><pre>{JSON.stringify(user, null,)}</pre></code>
-            <h1>LoginPage</h1>
+    <>
+    <div className="contenedor">
+            <code><pre>{JSON.stringify(user, null, " ")}</pre></code>
+            <h1 className="login" id="login">LoginPage</h1>
             <h2>{mensaje}</h2>
             <p>{isAuthenticated ? 'está autenticado' : 'no está autenticado'}</p>
+            
 
             <form
                 id='login'
@@ -49,5 +48,6 @@ export const Login = () => {
                 </button>
             </form>
         </div>
+        </>
   )
 }

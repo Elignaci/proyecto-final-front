@@ -8,9 +8,6 @@ export const ProtectedPages = () => {
   }
   return (
     <div>
-      <h1>
-        Rutas protegidas
-      </h1>
       <button onClick={handlerClick}>logout</button>
     </div>
   )

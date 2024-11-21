@@ -7,7 +7,7 @@ import { NavBarUsers } from "./NavBarUsers";
 export const NavBar = () => {
     const { isAuthenticated } = useUsers()
     return (
-        <><section className="autenticado">
+        <>
             {
                 isAuthenticated
                     ?
@@ -15,7 +15,7 @@ export const NavBar = () => {
                     :
                     <NavBarUsers />
             }
-        </section>
+       
         </>
 
     )

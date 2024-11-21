@@ -11,17 +11,26 @@ function App() {
 
     <>
       <UserProvider>
-        <header>
-          
+        <header className="cabecera">
+       
+          MAKEyourDnD
         </header>
         <nav>
           <NavBar />
+
+          <div>
+
+          </div>
         </nav>
         <main>
-        <AppRouters />
+
+          <AppRouters />
+          <img src="/src/images/fondo.jpg" alt="descripcion de imagen" />
         </main>
 
-        <footer>
+        <footer className="footer">
+          
+          MAKEyourDnD
         </footer>
       </UserProvider>
     </>
